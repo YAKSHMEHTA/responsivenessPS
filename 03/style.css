@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+
+}
+
+.logo {
+    display: inline-block;
+    width: 300px;
+    line-height: 80px;
+    font-size: 22px;
+}
+
+.nav {
+    display: inline-block;
+    width: 100%;
+    text-align: right;
+}
+
+.nav a {
+    margin-left: 40px;
+    text-decoration: none;
+    color: black;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    width: 100%;
+    height: 80vh;
+    margin: 0 auto;
+    align-items: center;
+    background-color: bisque;
+    justify-content: center;
+}
+
+.hero-text {
+    display: inline-block;
+    width: 600px;
+    padding-top: 150px;
+}
+
+.hero-image {
+    display: inline-block;
+    width: 700px;
+}
+
+.fake-image {
+    width: 700px;
+    height: 400px;
+    background: gray;
+}
+
+/* SERVICES */
+.services {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card {
+    display: block;
+    width: 400px;
+    height: 200px;
+    margin-right: 50px;
+    border: 1px solid black;
+    padding: 20px;
+}
+
+/* DASHBOARD */
+.dashboard {
+    width: 100%;
+    height: 100%;
+    margin: 100px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 240px;
+    height: 100%;
+    border: 1px solid black;
+}
+
+.content {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.stat-box {
+   height: 200px;
+    background: lightgray;
+}
+
+/* FOOTER */
+.footer {
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 100px;
+}
+
+@media (max-width: 768px) {
+    .dashboard {
+        flex-direction: column;
+    }
+    .hero{
+        display: flex;
+        flex-direction: column-reverse;
+        
+    }
+    .services{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .hero-text{
+        width: 100%;
+        overflow-x: hidden;
+    }
+    .fake-image{
+        height: 150px;
+        width: 70%;
+        display: inline-block;
+        margin-left: 5%;
+    }
+    .sidebar {
+        flex: 1;
+    }
+}
